@@ -1,155 +1,85 @@
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Converter</title>
-    <style>
-        /* General reset */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<!DOCTYPE html>
 
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f9;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
-            color: #333;
-        }
+<html>
 
-        h1 {
-            margin-bottom: 20px;
-            font-size: 2em;
-            color: #4A90E2;
-        }
-
-        /* Form Styling */
-        form {
-            background-color: white;
-            padding: 20px 40px;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            width: 300px;
-            text-align: center;
-        }
-
-        p {
-            margin-bottom: 15px;
-        }
-
-        label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: bold;
-        }
-
-        select, input[type="number"], button {
-            width: 100%;
-            padding: 10px;
-            margin-top: 5px;
-            margin-bottom: 15px;
-            border-radius: 4px;
-            border: 1px solid #ddd;
-            font-size: 1em;
-        }
-
-        select:focus, input[type="number"]:focus, button:focus {
-            outline: none;
-            border-color: #4A90E2;
-        }
-
-        button {
-            background-color: #4A90E2;
-            color: white;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        button:hover {
-            background-color: #357ABD;
-        }
-
-        #convertedVal {
-            background-color: #f0f0f0;
-            cursor: not-allowed;
-        }
-
-        /* Footer */
-        footer {
-            margin-top: 20px;
-            font-size: 0.9em;
-            color: #777;
-        }
-
-    </style>
-</head>
+<header>
+<h1>Simple Converter</h1>
+</header>
 
 <body>
 
-    <header>
-        <h1>Simple Converter</h1>
-    </header>
+    <p>
+    <label for = "choice" id="choiceLabel">
+        
+        <select name="choice" id="choice">
+            <option value=1>Farenheit to Celsius</option>
+            <option value=2>Celsius to Fahrenheit</option>
+            <option value=3>Meter to Feet</option>
+            <option value=4>Feet to Meters</option>
 
-    <form>
-        <p>
-            <label for="choice" id="choiceLabel">Choose Conversion Type:</label>
-            <select name="choice" id="choice">
-                <option value="1">Fahrenheit to Celsius</option>
-                <option value="2">Celsius to Fahrenheit</option>
-                <option value="3">Meter to Feet</option>
-                <option value="4">Feet to Meters</option>
-            </select>
-        </p>
+        </select>
 
-        <p>
-            <label for="num" id="numLabel">Number to be converted:</label>
-            <input type="number" id="num" name="num">
-        </p>
+    </label>
 
-        <p>
-            <button type="button" onclick="convert()">Convert</button>
-        </p>
+    
+    </p>
 
-        <p>
-            <label for="convertedVal" id="convertLabel">The Converted Value is:</label>
-            <input id="convertedVal" name="convertedVal" type="number" readonly>
-        </p>
-    </form>
+    <p>
+        <label for = "num" id="numLabel">Number to be converted</label> 
+        <input type = "number" id="num" name="num">
 
-    <footer>
-        <p>Made by Muhaisin Biruar</p>
-    </footer>
+        <button onclick="convert()">Convert</button>
+    </p>
 
-    <script>
-        function convert() {
-            let userChoice;
-            let number, converter;
+    <p>
+        <label for="convertedVal" id="convertLabel">The Converted Value is:</label>
 
-            userChoice = document.getElementById("choice").value * 1;
-            number = document.getElementById("num").value * 1;
+        <input id="convertedVal" name = "convertedVal" type="number" readonly>
+    </p>
 
-            console.log(userChoice);
-            console.log(number);
+<script>
 
-            if (userChoice == 1) {
-                converter = (number - 32) * (5 / 9); // Fahrenheit to Celsius
-            } else if (userChoice == 2) {
-                converter = (number * 9 / 5) + 32; // Celsius to Fahrenheit
-            } else if (userChoice == 3) {
-                converter = number * 3.281; // Meter to Feet
-            } else {
-                converter = number * 0.3048; // Feet to Meters
-            }
+    function convert()
+    {
+        let userChoice;
+        let number, converter;
 
-            document.getElementById("convertLabel").innerHTML = 'The converted value of ' + number + ' is:';
-            document.getElementById("convertedVal").value = converter.toFixed(2);
+        userChoice= document.getElementById("choice").value*1;
+        number = document.getElementById("num").value*1;
+
+        console.log(userChoice);
+        console.log(number);
+
+        converter=(number-32)*(5/9);
+        
+        if(userChoice==1)
+        {
+            converter=(number-32)*(5/9);
         }
-    </script>
+        else if(userChoice==2)
+        {
+            converter=(number*9/5)+32;
+        }
+        else if(userChoice==3)
+        {
+            converter=number*3.281;
+        }
+        else
+        {
+            converter=number*0.3048;
+        }
+        
+        
+        document.getElementById("convertLabel").innerHTML = 'The converted value of ' + number + ' is:';
+        document.getElementById("convertedVal").value=converter;
+        
+    }
+</script>
 
 </body>
+
+<footer>
+
+</footer>
 
 </html>
