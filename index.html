@@ -3,14 +3,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simple Converter</title>
     <style>
-        /* General reset */
-        * {
+        {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        body {
+        body 
+        {
             font-family: Arial, sans-serif;
             background-color: #f4f4f9;
             display: flex;
@@ -21,14 +21,15 @@
             color: #333;
         }
 
-        h1 {
+        h1 
+        {
             margin-bottom: 20px;
             font-size: 2em;
             color: #4A90E2;
         }
 
-        /* Form Styling */
-        form {
+        form 
+        {
             background-color: white;
             padding: 20px 40px;
             border-radius: 8px;
@@ -41,7 +42,8 @@
             margin-bottom: 15px;
         }
 
-        label {
+        label 
+        {
             display: block;
             margin-bottom: 8px;
             font-weight: bold;
@@ -77,9 +79,9 @@
             background-color: #f0f0f0;
             cursor: not-allowed;
         }
-
-        /* Footer */
-        footer {
+        
+        footer 
+        {
             margin-top: 20px;
             font-size: 0.9em;
             color: #777;
@@ -135,13 +137,20 @@
             console.log(userChoice);
             console.log(number);
 
-            if (userChoice == 1) {
+            if (userChoice == 1) 
+            {
                 converter = (number - 32) * (5 / 9); // Fahrenheit to Celsius
-            } else if (userChoice == 2) {
+            } 
+            else if (userChoice == 2) 
+            {
                 converter = (number * 9 / 5) + 32; // Celsius to Fahrenheit
-            } else if (userChoice == 3) {
+            } 
+            else if (userChoice == 3) 
+            {
                 converter = number * 3.281; // Meter to Feet
-            } else {
+            } 
+            else 
+            {
                 converter = number * 0.3048; // Feet to Meters
             }
 
@@ -149,7 +158,5 @@
             document.getElementById("convertedVal").value = converter.toFixed(2);
         }
     </script>
-
 </body>
-
 </html>
