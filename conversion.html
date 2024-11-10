@@ -1,17 +1,23 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simple Converter</title>
-    <link rel = "stylesheet" href="css/conversion.css">
+    
+
+    <link rel="stylesheet" href="./css/simplerconverter.css">
 </head>
 
-<body>
+
+<body >
+
+
     <header>
         <h1>Simple Converter</h1>
     </header>
-    
+
+
     <form>
         <p>
             <label for="choice" id="choiceLabel">Choose Conversion Type:</label>
@@ -26,12 +32,12 @@
 
         <p>
             <label for="num" id="numLabel">Number to be converted:</label>
-            <input type="number" id="num" name="num" onkeyup="convert()">
+            <input type="number" id="num" name="num" >
         </p>
 
 
         <p>
-            <button type="button" onclick="convert()">Convert</button>
+            <button type="button" id="converbtn">Convert</button>
         </p>
 
 
@@ -41,14 +47,14 @@
         </p>
     </form>
 
-
     <footer>
         <p>Made by Muhaisin Biruar</p>
     </footer>
-
-    <script src="js/scripts.js"></script>
+    
     <p>
         <a href = "index.html">Go Back to Home Page</a>
     </p>
+
+    <script src="js/Conversion.js"></script>
 </body>
 </html>
