@@ -5,7 +5,7 @@
 
   <title>Income Tax Calculator</title>
 
-  <link rel = "stylesheet" href="css/incometax.css">
+  <link rel="stylesheet" href="./css/conversion.css">
 
   </head>
 
@@ -16,13 +16,13 @@
   <body>
     <form>
     <p>
-        <label for="userNumber" id="userLabel">Taxable Income: </label>
-        <input type="number" id="userNumber" name="userNumber" onkeyup = "incomeTax()" onkeypress="incomeTax()">
+        <label for="userNumber" id="userLabel">Input your income: </label>
+        <input type="number" id="userNumber" name="userNumber">
     </p>
 
 
     <p>
-            <label for="taxedIncome" id="taxedLabel">Tax Payable:</label>
+            <label for="taxedIncome" id="taxedLabel">Income Tax:</label>
             <input id="taxedIncome" name="taxedIncome" type="number" readonly>
     </p>
     </form>
@@ -31,6 +31,6 @@
         <a href = "index.html">Go Back to Home Page</a>
     </div>
 
-    <script src="js/scripts.js"></script>
+    <script src="js/InComeTax.js"></script>
   </body>
   </html>
