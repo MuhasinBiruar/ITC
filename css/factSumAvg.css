@@ -1,0 +1,155 @@
+ * 
+    {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body
+    {
+      font-family: Garamond, times new roman;
+      background-color: #f0f2f5;
+      display: flex;
+      flex-direction: column;
+      align-items:center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+
+    header
+    {
+      margin-bottom: 20px;
+      text-align:center;
+    }
+
+    .header-container
+    {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    h1
+    {
+      color: #247CDB;
+      sont-size: 2.5em;
+      font-weight: bold;
+    }
+
+     h2
+    {
+      color: #247CDB;
+      sont-size: 2.5em;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    form
+    {
+      margin-bottom: 20px;
+      background-color: #ffffff;
+      padding: 15px 20px;
+      border-radius: 5px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      max-width: 350px;
+      width: 100%;
+      text-align: left;
+      font-weight: bold;
+    }
+
+    label
+    {
+      display: block;
+      font-weight: bold;
+      color: #2824DB;;
+      margin-better: 10px;
+      font-size: 1.1em;
+
+    }
+
+    input[type="number"] 
+    {
+      width: 100%;
+      padding: 8px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 1em;
+      margin-bottom: 15px;
+      box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+      transition: border-color 0.3s;
+    }
+
+     input[type="number"]:focus 
+    {
+      border-color: #24D7DB;
+      outline: none;
+      box-shadow: 0 0 5px rgba(45, 106, 79, 0.3);
+    }
+
+     input[readonly] 
+     {
+      background-color: #f8f9fa;
+      color: #495057;
+      cursor: not-allowed;
+    }
+
+    input[readonly]:hover
+    {
+      transform: scale(1.05); /* Slightly enlarges on hover */
+    }
+
+    .results
+    {
+      padding: 15px;
+      width: 100%;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      background-color: #ffffff;
+      max-width: 350px;
+      font-size: 1em;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      transition: border-color 0.3s;
+    }
+
+
+    /* Button styling */
+    #fsaBtn 
+    {
+      padding: 10px 20px;
+      background-color: #247CDB; /* Primary color */
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 1em;
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.2s;
+    }
+
+    #fsaBtn:hover 
+    {
+      background-color: #1A5DA0; /* Darker blue on hover */
+      transform: scale(1.05); /* Slightly enlarges on hover */
+    }
+
+    #fsaBtn:active 
+    {
+      background-color: #174B8A; /* Even darker on click */
+      transform: scale(1);
+    }
+
+    #backHome 
+    {
+    font-size: 1em;
+    color: #247CDB; /* Link color */
+    text-decoration: none; /* Removes underline */
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+    }
+
+    #backHome:hover 
+    {
+    background-color: #f0f2f5; /* Light background on hover */
+    color: #1A5DA0; /* Darker text color on hover */
+    }
