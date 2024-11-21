@@ -1,4 +1,15 @@
- function factSumAvg()
+document.addEventListener("DOMContentLoaded", () => {
+    // Hamburger menu functionality
+    const hamburger = document.getElementById("hamburger");
+    const navLinks = document.getElementById("nav-links");
+
+    // Toggle the active class on the menu when the hamburger is clicked
+    hamburger.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+    });
+});
+
+function factSumAvg()
       {
         //factorial of last n numbers
         let num=0, x=1, count=1;
