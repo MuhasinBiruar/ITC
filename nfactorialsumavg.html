@@ -1,20 +1,36 @@
   <!DOCTYPE html>
-  <html>
+  <html lang = "en">
   <head>
-  <meta charset="utf-8"/>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Factorial Sum Average</title>
 
   <link rel="stylesheet" href="css/factSumAvg.css">
 
   </head>
 
-  <header>
-    <h1>Factorial Sum Average</h1>
-
-  </header>
-
   <body>
+    <!-- Navigation Bar -->
+     <header>
+        <div class="container">
+            <nav class="menu sticky-header" id="menunav">
+                <!-- Hamburger Menu -->
+                <div class="hamburger-menu" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <!-- Navigation Links -->
+                <ul id="nav-links">
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./projects.html">Assignments</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+    <h1>Factorial Sum Average</h1>
     <form>
       <p>
           <label for="nnumber" id="nnumberLabel">Input Number:</label>
@@ -33,6 +49,7 @@
       <label for="avgResult" id="avgLabel">Average:</label>
         <input type="number" id="avgResult" name="avgResult" readonly><br>
     </div>
+    </main>
 
     <p>
         <a href = "index.html" id="backHome">Go Back to Home Page</a>
