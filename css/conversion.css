@@ -1,20 +1,23 @@
+/* Global Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-nav {
+nav 
+{
     position: sticky;
     top: 0; 
-    background-color: #ffffff;
+    background-color: #ffffff; 
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
-    z-index: 1000;
+    z-index: 1000; 
     padding: 10px 20px;
 }
 
 /* Navigation Bar */
-.nav-bar {
+.nav-bar 
+{
     background-color: #2980b9; 
     color: white;
     padding: 10px 20px;
@@ -28,7 +31,8 @@ nav {
     gap: 20px;
 }
 
-.nav-links li {
+.nav-links li 
+{
     margin: 0;
 }
 
@@ -39,11 +43,14 @@ nav {
     transition: color 0.3s ease;
 }
 
-.nav-links a:hover {
-    color: #f5f8fa; 
+.nav-links a:hover 
+{
+    color: #f5f8fa; /* Lighter color on hover */
 }
 
-.hamburger-menu {
+/* Hamburger Menu Styles */
+.hamburger-menu 
+{
     display: none; /* Hidden by default on larger screen*/
     flex-direction: column;
     justify-content: space-around;
@@ -52,7 +59,8 @@ nav {
     cursor: pointer;
 }
 
-.hamburger-menu span {
+.hamburger-menu span 
+{
     display: block;
     height: 4px;
     width: 100%;
@@ -61,10 +69,10 @@ nav {
     transition: all 0.3s ease-in-out;
 }
 
-
+/* Navigation Menu Styles */
 nav ul {
     list-style: none;
-    display: flex; /* Default: Horizontal layout */
+    display: flex;
     justify-content: space-around;
     margin: 0;
     padding: 0;
@@ -87,7 +95,7 @@ nav ul li a:hover {
 
 body 
 {
-    background-color: #f4f4f4;
+    background-color: #f4f4f4; 
     font-family: Arial, sans-serif; 
     color: #333; 
     padding: 0;
@@ -133,7 +141,8 @@ label {
     color: #7f8c8d; 
 }
 
-select, input[type="number"], button {
+select, input[type="number"], button 
+{
     width: 100%;
     padding: 10px;
     margin-top: 5px;
@@ -146,66 +155,71 @@ select, input[type="number"], button {
 
 select:focus, input[type="number"]:focus, button:focus {
     outline: none;
-    border-color: #2980b9; 
+    border-color: #2980b9;
+}
 
-button {
-    background-color: #2980b9; 
+button 
+{
+    background-color: #2980b9;
     color: white;
     cursor: pointer;
     transition: background-color 0.3s ease;
     border: none;
 }
 
-button:hover {
-    background-color: #1f6f92; /* Darker blue on hover */
+button:hover 
+{
+    background-color: #1f6f92;
 }
 
-#convertedVal {
-    background-color: #f7f9fa; /* Light grey for the readonly input */
+#convertedVal 
+{
+    background-color: #f7f9fa; 
     color: #555; 
     cursor: not-allowed;
 }
 
-footer {
+footer 
+{
     margin-top: 20px;
     text-align: center;
     font-size: 0.9em;
-    color: #7f8c8d; /* Soft grey text */
+    color: #7f8c8d; 
 }
 
-a {
-    color: #3498db; /* Bright blue for links */
+a 
+{
+    color: #3498db; 
     text-decoration: none;
 }
 
-a:hover {
+a:hover 
+{
     text-decoration: underline;
 }
 
 
 
 /* Responsive Design */
-@media (max-width: 768px) 
-    {
+@media (max-width: 768px) {
     
     .hamburger-menu {
-        display: flex; /* Show hamburger icon */
+        display: flex; 
     }
 
     #nav-links {
         display: none; 
-        flex-direction: column; 
+        flex-direction: column;
         position: absolute;
-        top: 50px; /* Below the header */
+        top: 50px; 
         left: 0;
         width: 100%;
         background-color: #ffffff; 
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
 
-    #nav-links.active 
-    {
-        display: flex; /* Show menu when active */
+    #nav-links.active {
+        display: flex; 
     }
 
     nav ul li {
@@ -238,16 +252,15 @@ a:hover {
         font-size: 1em;
     }
 }
-    
-@media (max-width: 480px) 
-{
+
+@media (max-width: 480px) {
     h1 {
         font-size: 1.5em;
     }
 
     form {
         padding: 10px 20px;
-        width: 75%; 
+        width: 75%;
     }
 
     label {
