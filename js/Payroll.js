@@ -1,3 +1,14 @@
+document.addEventListener("DOMContentLoaded", () => {
+    // Hamburger menu functionality
+    const hamburger = document.getElementById("hamburger");
+    const navLinks = document.getElementById("nav-links");
+
+    // Toggle the active class on the menu when the hamburger is clicked
+    hamburger.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+    });
+});
+
 function ConvertDecimal(v,x)
     {
      let rvalue;
