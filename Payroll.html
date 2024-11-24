@@ -5,14 +5,32 @@
 
   <title>Simple Payroll</title>
 
-  <link rel="stylesheet" href="css/payroll.css">
+  <link rel="stylesheet" href="/css/payroll.css">
  
   </head>
-  <header>
-    <h1>Simple Payroll</h1>
-  </header>
 
   <body>
+     <!-- Navigation Bar -->
+     <header>
+        <div class="container">
+            <nav class="menu sticky-header" id="menunav">
+                <!-- Hamburger Menu -->
+                <div class="hamburger-menu" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <!-- Navigation Links -->
+                <ul id="nav-links">
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./projects.html">Assignments</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+    <h1>Simple Payroll</h1>
     <div class="info">
         <div class="rap">
         <!-- add employee -->
@@ -69,15 +87,18 @@
 
       </table>
       <br><br>
-          <label class="inputline" for="employeeNum">Number of Employees:</label>
-          <input id="employeeNum"  type="number" readonly></input>
-          <p>
-          <label class="inputline" for="delEmployee">Delete Employee:</label>
-          <input id="delEmployee" type="number"></input>
-          <button id="btndelete">Delete</button>
-          </p>
+          <div id="employeeControls">
+            <div class="control-box">
+                <label class="inputline" for="employeeNum">Number of Employees:</label>
+                <input id="employeeNum" type="number" readonly>
+            </div>
+            <div class="control-box">
+                <label class="inputline" for="delEmployee">Delete Employee:</label>
+                <input id="delEmployee" type="number">
+                <button id="btndelete">Delete</button>
+            </div>
+        </div>
    </div>
-</div>
 
 <!-- Pop up dialogue -->
 
@@ -98,12 +119,14 @@
        
     </form>
 </dialog>
+</main>
+
     
     <p>
         <a href = "index.html" id="backHome">Go Back to Home Page</a>
     </p>
 
-    <script src="js/Payroll.js"> </script>
+    <script src="./Javascripts/Payroll.js"> </script>
     
   </body>
   </html>
