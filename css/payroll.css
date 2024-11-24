@@ -251,7 +251,7 @@ dialog button:hover {
     text-decoration: underline;
 }
 
-@media screen (max-width: 768px) {
+@media (max-width: 768px) {
     .menu ul {
         display: none;
         flex-direction: column;
